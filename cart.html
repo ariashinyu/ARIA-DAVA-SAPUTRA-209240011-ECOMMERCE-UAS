@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja | Ariastore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+      <h1>Ariastore</h1>
+      <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#products">Produk</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+              <li><a href="cart.html">Keranjang</a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <main>
+      <h2>Keranjang Belanja Anda</h2>
+      <ul id="cart-items">
+          <!-- Cart items will be loaded here by JavaScript -->
+      </ul>
+      <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+          Keranjang Anda kosong. Ayo belanja sekarang!
+      </div>
+      <div id="cart-summary" style="display: none;">
+          <p>Total: <span id="cart-total">Rp 0</span></p>
+          <button onclick="checkout()">Lanjutkan ke Pembayaran</button>
+      </div>
+  </main>
+
+  <footer>
+      <p>&copy; 2025 Ariastore. All rights reserved.</p>
+      <p>Email: <a href="mailto:info@ariastore.com">info@ariastore.com</a> | Telepon: (022) 123-4567</p>
+      <p>Alamat: Jl. K-Pop No. 17, Bandung, Jawa Barat, Indonesia</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

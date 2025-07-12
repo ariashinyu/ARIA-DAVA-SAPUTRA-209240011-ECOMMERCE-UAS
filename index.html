@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariastore - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #6a0dad; /* Ungu gelap */
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e0b0ff; /* Ungu muda */
+        }
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 1rem;
+            background: linear-gradient(to right, #8a2be2, #a020f0); /* Gradien ungu */
+            color: white;
+            border-radius: 8px;
+        }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-info h3 {
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+            color: #6a0dad;
+        }
+        .product-info p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .product-card button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .product-card button:hover {
+            background-color: #8a2be2;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+        footer a {
+            color: #e0b0ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+            header h1 {
+                margin-bottom: 1rem;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            main {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ariastore</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="cart.html">Keranjang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Selamat Datang di Ariastore!</h2>
+            <p>Temukan album dan lightstick K-Pop favoritmu di sini.</p>
+        </section>
+
+        <section id="products">
+            <h2>Produk Unggulan</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/000080/FFFFFF?text=BTS+MOTS7+Album" alt="BTS - Map of the Soul: 7 Album">
+                    <div class="product-info">
+                        <h3>BTS - Map of the Soul: 7 Album</h3>
+                        <p>Album studio keempat dari grup idola Korea Selatan BTS.</p>
+                        <div class="product-price">Rp 350.000</div>
+                        <button onclick="location.href='product-bts-mot7.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/000000/FFC0CB?text=BLACKPINK+Lightstick" alt="BLACKPINK Lightstick V2">
+                    <div class="product-info">
+                        <h3>BLACKPINK Lightstick V2</h3>
+                        <p>Lightstick resmi BLACKPINK versi 2, desain palu ikonik.</p>
+                        <div class="product-price">Rp 600.000</div>
+                        <button onclick="location.href='product-blackpink-ls.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/1E90FF/FFFFFF?text=EXO+DFT+Album" alt="EXO - Don't Fight The Feeling Album">
+                    <div class="product-info">
+                        <h3>EXO - Don't Fight The Feeling Album</h3>
+                        <p>Album spesial dari EXO, dengan konsep luar angkasa.</p>
+                        <div class="product-price">Rp 320.000</div>
+                        <button onclick="location.href='product-exo-dftf.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/FF69B4/FFFFFF?text=TWICE+Candy+Bong+Z" alt="TWICE Candy Bong Z Lightstick">
+                    <div class="product-info">
+                        <h3>TWICE Candy Bong Z Lightstick</h3>
+                        <p>Lightstick resmi TWICE, dengan desain permen yang manis.</p>
+                        <div class="product-price">Rp 580.000</div>
+                        <button onclick="location.href='product-twice-candybongz.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/800080/FFFFFF?text=Stray+Kids+ODDINARY" alt="Stray Kids - ODDINARY Album">
+                    <div class="product-info">
+                        <h3>Stray Kids - ODDINARY Album</h3>
+                        <p>Mini album dari Stray Kids, dengan lagu-lagu powerful.</p>
+                        <div class="product-price">Rp 300.000</div>
+                        <button onclick="location.href='product-straykids-oddinary.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/FFD700/000000?text=ITZY+CHECKMATE" alt="ITZY - CHECKMATE Album">
+                    <div class="product-info">
+                        <h3>ITZY - CHECKMATE Album</h3>
+                        <p>Mini album dari ITZY, dengan konsep yang kuat dan energik.</p>
+                        <div class="product-price">Rp 290.000</div>
+                        <button onclick="location.href='product-itzy-checkmate.html'">Lihat Detail</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x250/4B0082/FFFFFF?text=SEVENTEEN+Carat+Bong" alt="SEVENTEEN Carat Bong V2 Lightstick">
+                    <div class="product-info">
+                        <h3>SEVENTEEN Carat Bong V2 Lightstick</h3>
+                        <p>Lightstick resmi SEVENTEEN, Carat Bong versi 2.</p>
+                        <div class="product-price">Rp 620.000</div>
+                        <button onclick="location.href='product-seventeen-caratbong.html'">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ariastore. All rights reserved.</p>
+        <p>Email: <a href="mailto:info@ariastore.com">info@ariastore.com</a> | Telepon: (022) 123-4567</p>
+        <p>Alamat: Jl. K-Pop No. 17, Bandung, Jawa Barat, Indonesia</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
